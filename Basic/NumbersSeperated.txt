@@ -1,0 +1,10 @@
+1 is Odd and NotPrime
+2 is Even and Prime
+3 is Odd and Prime
+4 is Even and NotPrime
+5 is Odd and Prime
+6 is Even and NotPrime
+7 is Odd and Prime
+8 is Even and NotPrime
+9 is Odd and NotPrime
+10 is Even and NotPrime
