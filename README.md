@@ -1,6 +1,6 @@
-Java Programs Repository
+PrepRepo Repository
 
-Welcome to my Java repository! This collection includes a variety of **basic Java programs** and comprehensive **Data Structures & Algorithms (DSA)** implementations, designed to help with learning and mastering core programming concepts.
+Welcome to my PrepRepo repository! This collection includes a variety of **basic Java programs** and comprehensive **Data Structures & Algorithms (DSA)** implementations, designed to help with learning and mastering core programming concepts.
 
 ---
 
