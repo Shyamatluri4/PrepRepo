@@ -13,7 +13,7 @@ public class BubbleSort{
                 }
             }
         }
-        System.out.println("sorted array by bubble sort : ");
+        System.out.println("Sorted array by bubble sort : ");
         for(int b : array){
         System.out.print(b+" ");
        }
