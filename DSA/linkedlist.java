@@ -1,11 +1,11 @@
 public class linkedlist {
     Node head;
     private int size;
-    
+
     linkedlist(){
         this.size=0;
     }
-
+    
     class Node{
         String data;
         Node next;
