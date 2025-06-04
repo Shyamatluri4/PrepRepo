@@ -93,8 +93,44 @@ public class linkedlist {
         secondLast.next=null;
     }
 
+    // get size
     public int getSize(){
         return size;
+    }
+
+    // reverse list
+    public void reversedList(){
+        if(head==null || head.next==null){
+           System.out.println("The list is empty or consists of a single element.");
+           return;
+        }
+
+        Node prev=head;
+        Node current=head.next;
+        while(current!=null){
+            Node nextNode=current.next;
+            current.next=prev;
+            
+            prev=current;
+            current=nextNode;
+        }
+
+        head.next=null;
+        head=prev;
+    }
+    
+    // reverse list using recursion
+    public static Node reverseRecursive(Node head){
+
+        if(head==null || head.next==null){
+            return head;
+        }
+
+        Node newhead = reverseRecursive(head.next);
+        head.next.next=head;
+        head.next=null;
+
+        return newhead;
     }
 
     public static void main(String[] args) {
@@ -103,7 +139,7 @@ public class linkedlist {
         list.addLast("8");
         list.addLast("7");
 
+        list.head = reverseRecursive(list.head);
         list.printList();
-        System.out.println(list.getSize());
     }
 }
