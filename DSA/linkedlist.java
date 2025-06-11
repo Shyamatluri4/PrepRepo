@@ -1,5 +1,5 @@
 public class linkedlist {
-    Node head;
+    public Node head;
     private int size;
 
     linkedlist(){
@@ -133,13 +133,37 @@ public class linkedlist {
         return newhead;
     }
 
+    // finding and removing the nth node from the start.
+    public Node removeNthNode(int n){
+        if(head.next==null){
+            System.out.println("There is only one element in the list.");
+            return null;
+        }
+
+        if(n==size){
+            return head=head.next;
+        }
+        
+        int i=1;
+        int indexToSearch = size-n;
+        Node prev=head;
+        while(i < indexToSearch){
+            prev=prev.next;
+            i++;
+        }
+
+        prev.next = prev.next.next;
+        return head;
+    }
+
     public static void main(String[] args) {
         linkedlist list = new linkedlist();
         list.addFirst("5");
         list.addLast("8");
         list.addLast("7");
+        list.addLast("10");
 
-        list.head = reverseRecursive(list.head);
+        list.removeNthNode(3);
         list.printList();
     }
 }
