@@ -130,29 +130,6 @@ public class linkedlist {
         return newhead;
     }
 
-    // finding and removing the nth node from the start.
-    public Node removeNthNode(int n){
-        if(head.next==null){
-            System.out.println("There is only one element in the list.");
-            return null;
-        }
-
-        if(n==size){
-            return head=head.next;
-        }
-        
-        int i=1;
-        int indexToSearch = size-n;
-        Node prev=head;
-        while(i < indexToSearch){
-            prev=prev.next;
-            i++;
-        }
-        size--;
-        prev.next = prev.next.next;
-        return head;
-    }
-
     public static void main(String[] args) {
         linkedlist list = new linkedlist();
         list.addFirst("1");
@@ -160,8 +137,6 @@ public class linkedlist {
         list.addLast("8");
         list.addLast("1");
 
-        
-        list.removeNthNode(2);
         list.printList();
         System.out.println(list.size);
     }
