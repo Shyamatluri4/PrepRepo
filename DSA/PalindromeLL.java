@@ -14,7 +14,9 @@ public class PalindromeLL {
             fastNode = fastNode.next.next;
         }
         
+        // reversing the second half
         linkedlist.Node secondHalf = list.reversedList(slowNode);
+        linkedlist.Node secondHalfCopy = secondHalf;  //restoring the second half
         linkedlist.Node firstHalf = head;
         while(secondHalf!=null){
             if(firstHalf.data!=secondHalf.data){
@@ -25,6 +27,7 @@ public class PalindromeLL {
             secondHalf=secondHalf.next;
         }
 
+        list.reversedList(secondHalfCopy);
         return true;
 
     }
