@@ -1,6 +1,6 @@
 public class linkedlist {
-    public Node head;
-    private int size;
+    Node head;
+    int size;
 
     linkedlist(){
         this.size=0;
@@ -93,16 +93,11 @@ public class linkedlist {
         secondLast.next=null;
     }
 
-    // get size
-    public int getSize(){
-        return size;
-    }
-
     // reverse list
-    public void reversedList(){
+    public Node reversedList(Node head){
         if(head==null || head.next==null){
            System.out.println("The list is empty or consists of a single element.");
-           return;
+           return head;
         }
 
         Node prev=head;
@@ -117,10 +112,12 @@ public class linkedlist {
 
         head.next=null;
         head=prev;
+
+        return head;
     }
     
     // reverse list using recursion
-    public static Node reverseRecursive(Node head){
+    public  Node reverseRecursive(Node head){
 
         if(head==null || head.next==null){
             return head;
@@ -151,19 +148,21 @@ public class linkedlist {
             prev=prev.next;
             i++;
         }
-
+        size--;
         prev.next = prev.next.next;
         return head;
     }
 
     public static void main(String[] args) {
         linkedlist list = new linkedlist();
-        list.addFirst("5");
-        list.addLast("8");
+        list.addFirst("1");
         list.addLast("7");
-        list.addLast("10");
+        list.addLast("8");
+        list.addLast("1");
 
-        list.removeNthNode(3);
+        
+        list.removeNthNode(2);
         list.printList();
+        System.out.println(list.size);
     }
 }
