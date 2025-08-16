@@ -66,3 +66,14 @@ Features:
 - Randomized computer choice
 
 - Real-time score tracking and result messages
+
+
+3️⃣ Currency Converter
+
+A simple and interactive Currency Converter built with HTML, CSS, and JavaScript. Features:
+
+- Real-time currency conversion
+
+- Live exchange rates fetched from an API
+
+- Dynamic flag icons for selected currencies
